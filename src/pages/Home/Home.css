@@ -1,0 +1,33 @@
+.home{
+    margin: 100px ;
+    padding: 30px;
+    border: 2px solid saddlebrown;
+  
+}
+.todo{
+    display: flex;
+    align-items: center;
+    gap :1rem;
+    flex-direction: column;
+    padding:20px
+}
+.input{
+    display: flex;
+    gap: 1rem
+    ;
+}
+
+.item{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.eachItem{
+    align-items: center;
+    display: flex;
+    gap : 2rem;
+    justify-content: center;
+
+    
+}
