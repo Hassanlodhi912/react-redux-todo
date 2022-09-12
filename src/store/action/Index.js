@@ -8,10 +8,12 @@ export const addTodo = (data) =>{
         }
     }
 }
-export const deleteTodo = (id) =>{
+export const deleteTodo = (index) =>{
     return{
         type:ActionTypes.DELETE_TODO,
-      id
+      payload:index
+
+      
     }
 }
 

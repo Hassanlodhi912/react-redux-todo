@@ -3,10 +3,16 @@ import { addTodo ,deleteTodo ,removeTodo } from "../../store/action/Index"
 import { useDispatch ,useSelector } from "react-redux"
 import "./Home.css"
 const Home = () => {
+  
 const [inputData,setInputData]=useState("")
 const dispatch = useDispatch();
 const list = useSelector((state)=>state.todoReducer.list);
-  return (
+const deleteItem=(index)=>{
+const tempList = [...list]
+tempList.splice(index,1)
+
+}
+return (
       <div className="home">
     <div className="todo">
 
@@ -19,11 +25,12 @@ const list = useSelector((state)=>state.todoReducer.list);
     </div>
     <div className="item">
       {
-        list.map((val)=>{
+        list.map((val,index)=>{
           return(
-            <div className="eachItem" key={val.id}>
-            <h3>{val.data}</h3>
-         <button onClick={()=>dispatch(deleteTodo(val.id))}>delete</button>
+            <div className="eachItem" >
+            <p>
+              {val.data}</p>
+         <button onClick={()=>dispatch(deleteTodo(index))}>delete</button>
      
            </div>
           )

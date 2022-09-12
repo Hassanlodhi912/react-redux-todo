@@ -1,6 +1,8 @@
 import { ActionTypes } from "../content/ActionType"
 const initialData = {
-    list: []
+    list: [
+       
+    ]
 
 }
 const todoReducer = (state = initialData, action) => {
@@ -22,10 +24,12 @@ const todoReducer = (state = initialData, action) => {
 
             }
             case ActionTypes.DELETE_TODO:
-                const newList = state.list.filter((val) => val.id !== action.id)
+                const newList =[...state.list]
+                newList.splice(action.payload,1)
                 return{
                     ...state ,
                     list : newList
+    
                 }
 
   
