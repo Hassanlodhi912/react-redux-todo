@@ -31,6 +31,13 @@ const todoReducer = (state = initialData, action) => {
                     list : newList
     
                 }
+            case ActionTypes.REMOVE_TODO:
+                const removeList = []
+                return{
+                    ...state,
+                    list: removeList
+                }
+
 
   
         default: return state

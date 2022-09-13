@@ -2,6 +2,7 @@
     margin: 100px ;
     padding: 30px;
     border: 2px solid saddlebrown;
+    background-color: aquamarine;
   
 }
 .todo{
@@ -9,11 +10,12 @@
     align-items: center;
     gap :1rem;
     flex-direction: column;
-    padding:20px
+    padding:20px;
+    background-color: aqua;
 }
 .input{
     display: flex;
-    gap: 1rem
+    gap: 1rem;
     ;
 }
 

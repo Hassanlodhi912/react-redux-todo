@@ -7,11 +7,8 @@ const Home = () => {
 const [inputData,setInputData]=useState("")
 const dispatch = useDispatch();
 const list = useSelector((state)=>state.todoReducer.list);
-const deleteItem=(index)=>{
-const tempList = [...list]
-tempList.splice(index,1)
 
-}
+
 return (
       <div className="home">
     <div className="todo">
@@ -21,7 +18,6 @@ return (
 <div className="input">
     <input type="text" onChange={(event)=>{setInputData(event.target.value)}} value={inputData}/> 
     <button onClick={()=>dispatch(addTodo(inputData),setInputData(""))}>add</button>
-    </div>
     </div>
     <div className="item">
       {
@@ -36,8 +32,11 @@ return (
           )
         })
       }
-     
     </div>
+    <button onClick={()=>dispatch(removeTodo())}>Remove all todo</button>
+
+    </div>
+
    </div>
   )
 }
